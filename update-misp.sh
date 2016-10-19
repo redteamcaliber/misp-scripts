@@ -4,12 +4,14 @@ git pull
 cd /var/www/MISP/app/Lib/cakephp
 git fetch origin
 git checkout 2.6
-#cd /var/www/MISP/app/files/scripts/python-cybox
-#git checkout v2.1.0.12
-#python setup.py install
-#cd /var/www/MISP/app/files/scripts/python-stix
-#git checkout v1.1.1.4
-#python setup.py install
+cd /var/www/MISP/app/files/scripts/python-cybox
+git checkout v2.1.0.12
+python setup.py install
+cd /var/www/MISP/app/files/scripts/python-stix
+git checkout v1.1.1.4
+python setup.py install
+cd /var/www/MISP/
+git submodule update --init --force
 cd /var/www/MISP/app
 php composer.phar self-update
 php composer.phar update
